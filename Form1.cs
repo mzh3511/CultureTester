@@ -38,12 +38,27 @@ namespace CultureApp
             sb.AppendLine($"Name = {cultureInfo.Name}");
         }
 
-        private void btnFind_Click(object sender, EventArgs e)
+        private void btnFindById_Click(object sender, EventArgs e)
         {
             try
             {
                 var id = Convert.ToInt32(txtLcid.Text.Trim(), 16);
                 var cultureInfo = new CultureInfo(id);
+                var sb = new StringBuilder();
+                AppendCulture(sb, cultureInfo);
+                textBox1.Text = sb.ToString();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, Text, MessageBoxButtons.OK);
+            }
+        }
+
+        private void btnFindByName_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                var cultureInfo = new CultureInfo(txtLcid.Text.Trim());
                 var sb = new StringBuilder();
                 AppendCulture(sb, cultureInfo);
                 textBox1.Text = sb.ToString();

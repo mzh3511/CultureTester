@@ -30,8 +30,9 @@
         {
             this.btnCurrent = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.btnFind = new System.Windows.Forms.Button();
+            this.btnFindById = new System.Windows.Forms.Button();
             this.txtLcid = new System.Windows.Forms.TextBox();
+            this.btnFindByName = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCurrent
@@ -52,33 +53,45 @@
             this.textBox1.Location = new System.Drawing.Point(1, 41);
             this.textBox1.Multiline = true;
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(470, 337);
+            this.textBox1.Size = new System.Drawing.Size(595, 337);
             this.textBox1.TabIndex = 1;
             // 
-            // btnFind
+            // btnFindById
             // 
-            this.btnFind.Location = new System.Drawing.Point(141, 12);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(117, 23);
-            this.btnFind.TabIndex = 2;
-            this.btnFind.Text = "根据LCID获取语言信息";
-            this.btnFind.UseVisualStyleBackColor = true;
-            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            this.btnFindById.Location = new System.Drawing.Point(141, 12);
+            this.btnFindById.Name = "btnFindById";
+            this.btnFindById.Size = new System.Drawing.Size(117, 23);
+            this.btnFindById.TabIndex = 2;
+            this.btnFindById.Text = "根据LCID获取语言信息";
+            this.btnFindById.UseVisualStyleBackColor = true;
+            this.btnFindById.Click += new System.EventHandler(this.btnFindById_Click);
             // 
             // txtLcid
             // 
-            this.txtLcid.Location = new System.Drawing.Point(264, 13);
+            this.txtLcid.Location = new System.Drawing.Point(387, 13);
             this.txtLcid.Name = "txtLcid";
             this.txtLcid.Size = new System.Drawing.Size(100, 21);
             this.txtLcid.TabIndex = 3;
+            this.txtLcid.Text = "zh-CHT";
+            // 
+            // btnFindByName
+            // 
+            this.btnFindByName.Location = new System.Drawing.Point(264, 12);
+            this.btnFindByName.Name = "btnFindByName";
+            this.btnFindByName.Size = new System.Drawing.Size(117, 23);
+            this.btnFindByName.TabIndex = 4;
+            this.btnFindByName.Text = "根据Name获取语言信息";
+            this.btnFindByName.UseVisualStyleBackColor = true;
+            this.btnFindByName.Click += new System.EventHandler(this.btnFindByName_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(474, 382);
+            this.ClientSize = new System.Drawing.Size(599, 382);
+            this.Controls.Add(this.btnFindByName);
             this.Controls.Add(this.txtLcid);
-            this.Controls.Add(this.btnFind);
+            this.Controls.Add(this.btnFindById);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.btnCurrent);
             this.Name = "Form1";
@@ -92,8 +105,9 @@
 
         private System.Windows.Forms.Button btnCurrent;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button btnFind;
+        private System.Windows.Forms.Button btnFindById;
         private System.Windows.Forms.TextBox txtLcid;
+        private System.Windows.Forms.Button btnFindByName;
     }
 }
 
